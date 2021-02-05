@@ -85,7 +85,7 @@ class DFCAN(nn.Module):
         x=self.input(x)
         x=self.RGs(x)
         x=self.conv_gelu(x)
-        x=self.pixel_shuffle(x) #深度变换及图像尺寸*scale
+        x=self.pixel_shuffle(x) #upsampling
         x=self.conv_sigmoid(x)
         return x
 
